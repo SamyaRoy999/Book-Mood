@@ -27,7 +27,7 @@
     },
     {
       "id": 3,
-      "bookName": "1984",
+      "bookName": "Zentralbank kapitalismus",
       "author": "George Orwell",
       "image": "https://i.postimg.cc/qMWDTj2Q/book4.png",
       "review": "Orwell's chilling dystopian vision remains alarmingly relevant. '1984' warns of the dangers of totalitarianism and the erosion of truth, urging vigilance against oppressive regimes and surveillance culture.",
@@ -36,7 +36,7 @@
       "category": "Science Fiction",
       "tags": ["Dystopian", "Political"],
       "publisher": "Secker & Warburg",
-      "yearOfPublishing": 1949
+      "yearOfPublishing": 2023
     },
     {
       "id": 4,
