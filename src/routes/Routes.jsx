@@ -9,6 +9,7 @@ import Error from '../pages/error/Error';
 import ReadBooks from "../components/ReadBooks/ReadBooks";
 import Wishlist from "../components/WishList/Wishlist";
 import Recommend from "../pages/Recommend/Recommend";
+import About from "../pages/AboutUS/About";
 export const router = createBrowserRouter([
     {
         path: "/",
@@ -47,6 +48,10 @@ export const router = createBrowserRouter([
                 element: <Recommend />,
                 loader: () => fetch("/data/data.json")
             },
+            {
+                path: "/about",
+                element: <About/>, 
+            }
         ]
     },
 ]);

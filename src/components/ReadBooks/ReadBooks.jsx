@@ -10,7 +10,6 @@ const ReadBooks = () => {
         const loculData = getData();
         setStorData(loculData);
     }, [])
-    console.log(storData);
 
     return (
         <>
@@ -44,8 +43,6 @@ const ReadBooks = () => {
                                 <span className="inline-block text-[#FFAC33] bg-amber-100 rounded-full py-3 px-5  text-sm font-semibold mr-2 bg-[#FFAC3326]">Rating:{item.rating}</span>
                                 <button className="btn btn-secondary bg-[#23BE0A] border-none rounded-full">View Details</button>
                             </div>
-
-
                         </div>
                     </div>
                 ))

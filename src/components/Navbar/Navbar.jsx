@@ -24,6 +24,7 @@ const Navbar = () => {
                     <li className="mr-7"><NavLink to='/listedBooks' >Listed Books</NavLink></li>
                     <li className="mr-7"><NavLink to='/read' >Pages to Read</NavLink></li>
                     <li className="mr-7"><NavLink to='/Recommend' >Recommended</NavLink></li>
+                    <li className="mr-7"><NavLink to='/about' >About </NavLink></li>
                 </ul>
             </div>
             <div className="navbar-end ">

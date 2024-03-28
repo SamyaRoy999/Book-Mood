@@ -1,7 +1,7 @@
 import { toast } from 'react-toastify';
 export const getWishData =()=>{
     let data = []
-    const dataStore = localStorage.getItem('book')
+    const dataStore = localStorage.getItem('wish')
     if (dataStore) {
         data = JSON.parse(dataStore)
     }
@@ -11,9 +11,9 @@ export const wishData=(wish)=>{
     let data = getWishData()
     const isExist = data.find(d=> d.id === wish.id)
     if (isExist) {
-        return toast.error("Wow so easy! dsafasd")
+        return toast.error("Alredy added wish list")
     }
     data.push(wish)
-    localStorage.setItem('book', JSON.stringify(data))
+    localStorage.setItem('wish', JSON.stringify(data))
     toast.success("Book Added to Wish List")
 }

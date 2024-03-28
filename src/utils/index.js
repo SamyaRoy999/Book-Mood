@@ -11,7 +11,7 @@ export const saveData=(book)=>{
     let data = getData()
     const isExist = data.find(d=> d.id === book.id)
     if (isExist) {
-        return toast.error("Wow so easy! dsafasd")
+        return toast.error("Book Added to Read List")
     }
     data.push(book)
     localStorage.setItem('book', JSON.stringify(data))

@@ -1,20 +1,15 @@
 
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from 'recharts';
 import { getData } from '../../utils';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 
 const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
 
 
 
-const chartData = getData();
-const grapData = chartData.map(item => (
-    {
-        name: item.bookName,
-        uv: item.totalPages,
-    }
-))
+
+
 
 
 
@@ -32,18 +27,21 @@ const TriangleBar = (props) => {
     return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
 };
 
+
 export default function App() {
-    // useEffect(() => {
+    const [data , setData] = useState([])
 
-    //     window.location.reload(true);
+    useEffect(() => {
+        const chartData = getData();
+       setData(chartData)
 
-    // }, [1])
+    }, [])
 
     return (
         <BarChart
             width={900}
             height={600}
-            data={grapData}
+            data={data}
             margin={{
                 top: 20,
                 right: 30,
@@ -54,10 +52,10 @@ export default function App() {
         >
             react skjflasjlfjlkasdjdflj
             <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="name" />
-            <YAxis />
-            <Bar dataKey="uv" fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
-                {chartData.map((entry, index) => (
+            <XAxis dataKey="bookName" />
+            <YAxis dataKey="totalPages"/>
+            <Bar dataKey="totalPages" fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
+                {data.map((entry, index) => (
                     <Cell key={`cell-${index}`} fill={colors[index % 20]} />
                 ))}
             </Bar>

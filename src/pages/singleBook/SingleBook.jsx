@@ -21,7 +21,7 @@ const SingleBook = () => {
             setToasti(false)
            
         }else{
-            toast.error("Wow so easy!")
+            toast.error("You Have Alrady Read This Book")
         }
         
     }
