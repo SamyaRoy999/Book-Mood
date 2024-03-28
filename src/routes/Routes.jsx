@@ -8,6 +8,7 @@ import SingleBook from '../pages/singleBook/SingleBook';
 import Error from '../pages/error/Error';
 import ReadBooks from "../components/ReadBooks/ReadBooks";
 import Wishlist from "../components/WishList/Wishlist";
+import Recommend from "../pages/Recommend/Recommend";
 export const router = createBrowserRouter([
     {
         path: "/",
@@ -40,7 +41,12 @@ export const router = createBrowserRouter([
                 path: "/book/:id",
                 element: <SingleBook />,
                 loader: () => fetch("/data/data.json")
-            }
+            },
+            {
+                path: "/Recommend",
+                element: <Recommend />,
+                loader: () => fetch("/data/data.json")
+            },
         ]
     },
 ]);

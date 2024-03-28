@@ -23,11 +23,12 @@ const Navbar = () => {
                     <li className="mr-7"><NavLink to='/' >Home</NavLink></li>
                     <li className="mr-7"><NavLink to='/listedBooks' >Listed Books</NavLink></li>
                     <li className="mr-7"><NavLink to='/read' >Pages to Read</NavLink></li>
+                    <li className="mr-7"><NavLink to='/Recommend' >Recommended</NavLink></li>
                 </ul>
             </div>
             <div className="navbar-end ">
-                <a className="btn bg-[#23BE0A] mr-3">Sign In</a>
-                <a className="btn bg-[#59C6D2]">Sign Up</a>
+                <a className="btn bg-[#23BE0A] mr-3 text-white">Sign In</a>
+                <a className="btn bg-[#59C6D2] text-white">Sign Up</a>
              
             </div>
         </div>
