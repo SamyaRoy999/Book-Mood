@@ -15,8 +15,6 @@ const Book = ({ data }) => {
                     </div>
                     <div className="px-6 py-4 text-left">
                         {tags.map((item, index) => <span key={index} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold mr-2 text-[#23BE0A]">{item}</span>)}
-
-
                     </div>
                     <div className="px-6 py-4 text-left">
                         <div className="font-bold text-2xl mb-2 Playfair">{bookName}</div>

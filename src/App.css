@@ -8,3 +8,11 @@
 .WorkSans{
     font-family: "Work Sans", sans-serif;
 }
+.active{
+    border: 2px solid green;
+    background: #fff;
+    color: green;
+    /* background-color: gray; */
+    padding: 10px;
+    border-radius: 7px;
+}

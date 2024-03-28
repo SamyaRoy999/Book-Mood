@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import  '../../App.css'
 
 const Banner = () => {
@@ -12,10 +13,10 @@ const Banner = () => {
                     </h1>
                    
                     <div className="flex justify-center">
-                        <a href="#"
-                            className="inline-flex text-white bg-emerald-600 border-0 py-2 px-6 focus:outline-none hover:bg-emerald-600 rounded text-lg">
+                        <Link to='/listedBooks' href="#"
+                            className="inline-flex text-white bg-[#23BE0A] border-0 py-2 px-6 focus:outline-none hover:bg-emerald-600 rounded text-lg">
                             View The List
-                        </a>
+                        </Link>
                     </div>
                 </div>
                 <div className="lg:max-w-lg lg:w-full mb-5 md:mb-0 md:w-1/2 w-3/6">

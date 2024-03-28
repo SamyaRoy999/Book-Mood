@@ -15,5 +15,5 @@ export const saveData=(book)=>{
     }
     data.push(book)
     localStorage.setItem('book', JSON.stringify(data))
-    toast.success("Wow so easy!")
+    toast.success("Book Added to Read List")
 }

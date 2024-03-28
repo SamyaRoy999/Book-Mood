@@ -4,6 +4,7 @@ import { useLoaderData, useParams } from "react-router-dom"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { saveData } from "../../utils";
+import { wishData } from "../../utils/index2";
 
 const SingleBook = () => {
     const [toasti, setToasti] = useState(true)
@@ -18,6 +19,7 @@ const SingleBook = () => {
         if (toasti) {
             saveData(book)
             setToasti(false)
+           
         }else{
             toast.error("Wow so easy!")
         }
@@ -25,10 +27,10 @@ const SingleBook = () => {
     }
     const hendelish=(book)=>{
         if (toasti) {
-            console.log(book);
-            toast.success("Wow so easy!")
+            wishData(book)
+           
         }else{
-            toast.error("Wow so easy!")
+            toast.error("You Have Alrady Read This Book")
         }
 
     }
@@ -81,7 +83,7 @@ const SingleBook = () => {
                                     <td className=" font-bold text-base">{rating}</td>
                                 </tr>
                                 <div>
-                                    <button  className="btn btn-outline mr-4 mt-6 btn-info" onClick={()=> hendelRead( book)}>Read </button>
+                                    <button  className="btn btn-outline mr-4 mt-6 btn-info" onClick={()=> hendelRead( book)}  >Read </button>
                                     <button  className="btn bg-[#59C6D2]" onClick={()=> hendelish( book)}>Wishlist</button>
                                     <ToastContainer />
                                 </div>
