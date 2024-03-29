@@ -3,6 +3,7 @@ import { Link, Outlet } from "react-router-dom"
 
 const ListedBooks = () => {
     const [active, setActive] = useState(0)
+    
     return (
         <>
             <div className=" text-center bg-[#1313130D] mb-8 rounded-lg p-8 ">
@@ -13,7 +14,7 @@ const ListedBooks = () => {
                 <div className="">
                     <div tabIndex={0} role="button" className="btn m-1 bg-[#23BE0A]">Click</div>
                     <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow rounded-box w-52">
-                        <li><a>Item 1</a></li>
+                        <li><a>Rating</a></li>
                         <li><a>Item 2</a></li>
                     </ul>
                 </div>

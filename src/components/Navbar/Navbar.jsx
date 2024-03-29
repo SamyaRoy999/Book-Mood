@@ -14,6 +14,8 @@ const Navbar = () => {
                         <li><NavLink to='/'  >Home</NavLink></li>
                         <li><NavLink to='/listedBooks'>Listed Books</NavLink></li>
                         <li><NavLink to='/read'>Pages to Read</NavLink></li>
+                        <li className="mr-7"><NavLink to='/Recommend' >Recommended</NavLink></li>
+                        <li className="mr-7"><NavLink to='/about' >About </NavLink></li>
                     </ul>
                 </div>
                 <a className=" font-bold text-3xl">Book Vibe</a>
@@ -30,10 +32,10 @@ const Navbar = () => {
             <div className="navbar-end ">
                 <a className="btn bg-[#23BE0A] mr-3 text-white">Sign In</a>
                 <a className="btn bg-[#59C6D2] text-white">Sign Up</a>
-             
+
             </div>
         </div>
-    ) 
+    )
 }
 
 export default Navbar

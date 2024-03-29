@@ -7,8 +7,8 @@ const Book = ({ data }) => {
 
     return (
 
-        <Link to={`/book/${id}`}>
-            <div className="mx-auto w-full">
+        <Link to={`/book/${id}`} className="mx-auto mb-3">
+            <div className="mx-auto  w-full">
                 <div className="max-w-sm rounded overflow-hidden shadow-lg">
                     <div className=" mx-auto">
                         <img className="h-[230px] w-[170px] " src={image} alt="Sunset in the mountains" />
