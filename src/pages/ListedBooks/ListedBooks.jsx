@@ -1,9 +1,11 @@
 import { useState } from "react"
 import { Link, Outlet } from "react-router-dom"
+import { getData } from "../../utils"
 
 const ListedBooks = () => {
     const [active, setActive] = useState(0)
-    
+    const data = getData()
+    console.log(data);
     return (
         <>
             <div className=" text-center bg-[#1313130D] mb-8 rounded-lg p-8 ">

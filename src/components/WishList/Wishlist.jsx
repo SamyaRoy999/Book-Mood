@@ -3,6 +3,7 @@ import { FaUserFriends } from "react-icons/fa";
 import { CiLocationOn } from "react-icons/ci";
 import { MdOutlineInsertPageBreak } from "react-icons/md";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Wishlist = () => {
 
@@ -17,8 +18,8 @@ const Wishlist = () => {
             {
                 storData.map((item, index) => (
 
-                    <div key={index} className="card card-side bg-base-100 border border-y-neutral-500 my-7">
-                        <figure className="p-4 m-5 w-[260px] h-[300px] bg-slate-300 rounded-lg"><img src={item.image} alt="Movie" /></figure>
+                    <div key={index} className="card card-side bg-base-100  flex flex-col lg:flex-row border  border-y-neutral-500 my-7">
+                        <figure className="p-4 m-5 w-[260px] h-[300px] mx-auto lg:m-5 bg-slate-300 rounded-lg"><img src={item.image} alt="Movie" /></figure>
                         <div className="">
                             <h2 className=" font-bold text-3xl m-4 ">{item.bookName}</h2>
                             <p className=" text-base font-medium mb-4 ml-4 text-[#131313CC]">By : Awlad Hossain</p>
@@ -29,7 +30,7 @@ const Wishlist = () => {
                                     <p >Year of Publishing: {item.yearOfPublishing}</p>
                                 </div>
                             </div>
-                            <div className="flex items-center gap-5 m-4">
+                            <div className="flex items-center flex-col lg:flex-row gap-5 m-4">
                                 <div className="flex items-center gap-2 text-[#131313CC] font-normal text-base">
                                     <FaUserFriends className=" text-2xl" />
                                     <p>Publisher: {item.publisher}</p>
@@ -42,7 +43,9 @@ const Wishlist = () => {
                             <div className="flex gap-3 ml-4">
                                 <span className="inline-block text-[#328EFF]  bg-sky-100 rounded-full py-3 px-5  text-sm font-semibold mr-2 bg-[#328EFF26]">Category: {item.category}</span>
                                 <span className="inline-block text-[#FFAC33] bg-amber-100 rounded-full py-3 px-5  text-sm font-semibold mr-2 bg-[#FFAC3326]">Rating:{item.rating}</span>
-                                <button className="btn btn-secondary bg-[#23BE0A] border-none rounded-full">View Details</button>
+                                <Link to={`/book/${item.id}`}>
+                                    <button className="btn btn-secondary bg-[#23BE0A] border-none rounded-full">View Details</button>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -51,7 +54,7 @@ const Wishlist = () => {
         </>
     )
 }
-       
+
 
 
 export default Wishlist
